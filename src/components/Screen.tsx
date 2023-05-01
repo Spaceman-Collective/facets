@@ -10,6 +10,7 @@ export function Screen({ style, children }: Props) {
 
 const styles = StyleSheet.create({
   screen: {
+    backgroundColor:"#14191E",
     flex: 1,
     padding: 12,
   },

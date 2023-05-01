@@ -2,12 +2,13 @@ import { StyleSheet, Text, View } from "react-native";
 
 type Props = {
   title: string;
+  style?: {};
   children: JSX.Element | JSX.Element[] | null;
 };
 
-export function Section({ title, children }: Props) {
+export function Section({ title, style, children }: Props) {
   return (
-    <View style={styles.container}>
+    <View style={style}>
       <Text style={styles.title}>{title}</Text>
       <View style={styles.example}>{children}</View>
     </View>
@@ -15,11 +16,11 @@ export function Section({ title, children }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 16,
-  },
+
   title: {
-    textAlign: "center",
+    textAlign: "left",
+    color:"#7392FF",
+    fontWeight:"bold",
   },
   example: {
     marginTop: 8,
